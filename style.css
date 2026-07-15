@@ -1,1 +1,149 @@
 
+:root{
+ --primary:#0F4C81;
+ --secondary:#2E7D32;
+ --accent:#FF9800;
+ --bg:#f5f7fb;
+ --card:#fff;
+ --text:#1f2937;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+html{scroll-behavior:smooth}
+.navbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:100;
+}
+.logo{
+font-size:1.4rem;
+font-weight:bold;
+color:var(--primary);
+}
+nav a{
+text-decoration:none;
+margin-left:20px;
+color:var(--text);
+font-weight:600;
+transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+.hero{
+padding:90px 8%;
+text-align:center;
+background:linear-gradient(135deg,#0F4C81,#2E7D32);
+color:white;
+}
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:var(--accent);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:50px 8%;
+}
+.card{
+background:var(--card);
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+}
+.card h2{
+color:var(--primary);
+font-size:2rem;
+}
+#experiments{
+padding:60px 8%;
+}
+#experiments h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.2rem;
+color:var(--primary);
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+.exp-card{
+background:#fff;
+padding:28px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+border-top:6px solid var(--primary);
+}
+.exp-card:hover{
+transform:translateY(-10px);
+}
+.exp-card h3{
+color:var(--secondary);
+margin-bottom:8px;
+}
+.exp-card h4{
+margin-bottom:15px;
+}
+.exp-card p{
+margin-bottom:20px;
+}
+.exp-card a{
+text-decoration:none;
+font-weight:bold;
+color:var(--primary);
+}
+footer{
+margin-top:50px;
+padding:35px;
+text-align:center;
+background:#111827;
+color:white;
+}
+@media(max-width:768px){
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+.hero h1{
+font-size:2rem;
+}
+nav a{
+margin:0 10px;
+}
+}
